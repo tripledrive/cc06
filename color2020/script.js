@@ -14,7 +14,7 @@ const a10 = ["かじの","カジノ"]
 const a11 = ["さめ","鮫","サメ"]
 const a12 = ["ぜろ","zero","ゼロ","零","ZERO"]
 const a13 = ["レジェンド","れじぇんど"]
-const a14 = ["挑戦","ちょうせん"]
+const a14 = ["決闘","けっとう"]
 
 function checkanswer(){
     const textbox = document.getElementById("text").value
@@ -140,7 +140,12 @@ function checkanswer(){
         elem = document.getElementById("zero")
         elem.classList.add("show")
         elem.classList.remove("hide")
+    }else if(a13.includes(textbox)){
+        document.getElementById("message").innerHTML = "【キーワード：レジェンド 正解】<br>赤い印にカードの頭合わせ、<br>残った文字順に読め"
+    }else if(a14.includes(textbox)){
+        document.getElementById("message").innerHTML = "【キーワード：決闘 正解】<br>【完全クリア！】<br>すごい！"
     }
+
     if(key[0] >= 12){
 
     }

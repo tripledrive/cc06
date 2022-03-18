@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+
+img{
+    height: 240px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}

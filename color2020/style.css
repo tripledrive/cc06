@@ -6,6 +6,10 @@ img{
     height: 240px;
 }
 
+.clear{
+    height:330px;
+}
+
 .hide{
     display: none;
 }

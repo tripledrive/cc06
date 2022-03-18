@@ -4,7 +4,7 @@ let legend = 'false'
 const a1 = ["からくり","カラクリ"]
 const a2 = ["はかい","ハカイ","破壊"]
 const a3 = ["しゅご","守護"]
-const a4 = ["おすし","お寿司"]
+const a4 = ["おすし","お寿司","オスシ"]
 const a5 = ["返霊","へんれい"]
 const a6 = ["正義","せいぎ"]
 const a7 = ["たいよう","太陽"]
@@ -66,7 +66,7 @@ function checkanswer(){
             key[5] = 'true';
         }
         document.getElementById("answer").innerHTML = "解答数：" + key[0] + "/12"
-        document.getElementById("message").innerHTML = "【問5 正解】<br>「エスコバルド」の物語を紐解いた。"
+        document.getElementById("message").innerHTML = "【問5 正解】<br>「エスコバルドZ」の物語を紐解いた。"
         elem = document.getElementById("henrei")
         elem.classList.add("show")
         elem.classList.remove("hide")
@@ -141,12 +141,19 @@ function checkanswer(){
         elem.classList.add("show")
         elem.classList.remove("hide")
     }else if(a13.includes(textbox)){
-        document.getElementById("message").innerHTML = "【キーワード：レジェンド 正解】<br>赤い印にカードの頭合わせ、<br>残った文字順に読め"
+        legend = 'true'
+        document.getElementById("message").innerHTML = "【キーワード：レジェンド 正解】<br>【最後の謎】<br>赤い印にカードの頭合わせ、<br>残った文字順に読め"
     }else if(a14.includes(textbox)){
-        document.getElementById("message").innerHTML = "【キーワード：決闘 正解】<br>【完全クリア！】<br>すごい！"
+        if(legend == 'true'){
+            window.open("https://tripledrive.github.io/cc06/color2020/true.html")
+        }else{
+            window.open("https://tripledrive.github.io/cc06/color2020/false.html")
+        }
     }
 
     if(key[0] >= 12){
-
+        elem = document.getElementById("clear")
+        elem.classList.add("show")
+        elem.classList.remove("hide")
     }
 }
